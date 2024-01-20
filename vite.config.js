@@ -11,12 +11,17 @@ export default defineConfig(({ command, mode }) => {
       port: env.VITE_PORT,
     },
     build: {
-      rollupOptions: {
-        input: {
-          main: resolve(__dirname, "index.html"),
-          about: resolve(__dirname, "about", "index.html"),
-        },
-      },
+    //   rollupOptions: {
+    //     input: {
+    //       main: resolve(__dirname, "index.html"),
+    //       about: resolve(__dirname, "about", "index.html"),
+    //     },
+    //   },
+    lib: {
+        entry: resolve(__dirname, 'lib', "main.js"),
+        name: "kamerr",
+        fileName: (format) => `kamerr.${format}.js`
+    }
     },
   };
 });
