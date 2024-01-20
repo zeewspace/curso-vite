@@ -1,4 +1,5 @@
 import './style.css'
+import logoZ from './ZeewLogo.webp'
 
 
 document.querySelector('#app').innerHTML = `
@@ -7,3 +8,5 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
+const img = document.getElementById('img')
+img.src = logoZ
